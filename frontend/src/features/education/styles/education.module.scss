@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+table {
+  border-collapse: collapse;
+}
+.table {
+  &__container {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 15px;
+    position: relative;
+    max-width: 600px;
+    padding: 15px;
+  }
+  &__icon {
+    height: 40px;
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    & button {
+      color: white;
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      border: none;
+      box-shadow: 3px 3px 5px 1px rgba($color: #000000, $alpha: 0.3);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__btn-put {
+    background-color: lightblue;
+  }
+  &__btn-add {
+    background-color: lightgreen;
+  }
+  &__btn-del {
+    background-color: lightcoral;
+  }
+  &__form {
+    min-width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+  }
+  &__row-education {
+    border: 1px solid rgba($color: #000000, $alpha: 0.4);
+    width: 500px;
+    text-align: left;
+    padding-left: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: lightgray;
+    }
+  }
+}
+.active {
+  background-color: lightblue;
+}
