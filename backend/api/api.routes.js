@@ -122,15 +122,16 @@ router.post('/photo', async (req, res) => {
 
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
   const sampleFile = req.files.foo;
-  const uploadPath = `${__dirname}/photos/${sampleFile.name}`;
-  console.log(uploadPath);
-  // Use the mv() method to place the file somewhere on your server
-  sampleFile.mv(uploadPath, (err) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
-    res.send('File uploaded!');
-  });
+  console.log(sampleFile);
+  // const uploadPath = `${__dirname}/photos/${sampleFile.name}`;
+  // console.log(uploadPath);
+  // // Use the mv() method to place the file somewhere on your server
+  // sampleFile.mv(uploadPath, (err) => {
+  //   if (err) {
+  //     return res.status(500).send(err);
+  //   }
+  //   res.send('File uploaded!');
+  // });
 });
 
 module.exports = router;

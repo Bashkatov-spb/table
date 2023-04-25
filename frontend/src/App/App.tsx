@@ -40,7 +40,7 @@ function App(): JSX.Element {
         <Route path="/education" element={<EducationTable />} />
       </Routes>
       <form method="post" action="/api/photo" encType="multipart/form-data">
-        <input type="file" name="foo" />
+        <input multiple type="file" name="foo" />
         <input type="submit" />
       </form>
     </div>
