@@ -21,7 +21,6 @@ function App(): JSX.Element {
     }
   }, [dispatch, error]);
 
-  const onHandleSubmit = () => {};
   return (
     <div className="App">
       <div
